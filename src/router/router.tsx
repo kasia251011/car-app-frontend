@@ -4,9 +4,7 @@ import App from '../components/App';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: (
-      <App />
-    ) 
+    element: <App />
   }
 ]);
 
