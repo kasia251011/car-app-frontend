@@ -1,5 +1,8 @@
+import CarParamsCard from './CarParamsCard';
+import './app.scss';
+
 const App = () => {
-  return <div className="App">Template App</div>;
+  return <CarParamsCard />;
 };
 
 export default App;
