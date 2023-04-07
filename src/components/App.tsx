@@ -1,8 +1,8 @@
-import CarParamsCard from './CarParamsCard';
+import CarComparePage from './CarComparePage';
 import './app.scss';
 
 const App = () => {
-  return <CarParamsCard />;
+  return <CarComparePage />;
 };
 
 export default App;
