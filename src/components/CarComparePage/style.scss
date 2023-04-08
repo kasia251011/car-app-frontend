@@ -1,5 +1,5 @@
 .car-compare-page {
-  padding: 20px;
+  padding: 20px 80px;
   box-sizing: border-box;
   width: 100%;
   height: 100vh;
@@ -33,7 +33,7 @@
 
 @media screen and (min-width: 1600px) {
   .car-compare-page {
-    padding: 80px;
+    padding: 80px 250px;
 
     .header {
       margin-bottom: 20px;
