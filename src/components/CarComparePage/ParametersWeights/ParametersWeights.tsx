@@ -28,15 +28,9 @@ const ParametersWeights = () => {
           <Controller
             name={name}
             control={control}
-            render={({ field: { value, ...field } }) => (
-              <Slider
-                {...field}
-                className="slider"
-                min={0}
-                max={1}
-                step={0.1}
-                value={value ?? defaultValue}
-              />
+            defaultValue={defaultValue}
+            render={({ field }) => (
+              <Slider {...field} className="slider" min={0} max={1} step={0.1} />
             )}
           />
         </React.Fragment>
