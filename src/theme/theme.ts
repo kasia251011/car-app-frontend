@@ -70,6 +70,13 @@ const theme = createTheme({
         }
       }
     },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          fontSize: '12px'
+        }
+      }
+    },
     MuiSlider: {
       defaultProps: {
         min: 0,
