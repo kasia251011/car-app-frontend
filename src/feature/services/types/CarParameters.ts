@@ -1,22 +1,11 @@
-export type Fuel =
-  | 'GASOLINE'
-  | 'AVGAS'
-  | 'AVTUR'
-  | 'KEROSENE'
-  | 'SOLAR_OIL'
-  | 'DIESEL_OIL'
-  | 'FUEL_OIL'
-  | 'BIODIESEL';
+export type Fuel = 'GASOLINE' | 'GASOLINE + LPG' | 'DIESEL' | 'ELECTIC' | 'HYBRID';
 
 export const FUEL_TYPES: ReadonlyArray<Fuel> = [
-  'AVGAS',
-  'AVTUR',
-  'BIODIESEL',
-  'FUEL_OIL',
-  'KEROSENE',
-  'SOLAR_OIL',
-  'DIESEL_OIL',
-  'GASOLINE'
+  'GASOLINE',
+  'GASOLINE + LPG',
+  'DIESEL',
+  'ELECTIC',
+  'HYBRID'
 ];
 export type GearBox = 'MANUAL' | 'AUTOMATIC';
 
