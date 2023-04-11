@@ -13,8 +13,7 @@ const SLIDER_VALUES = [
   getSliderValues('parametersWeight.priceWeight', 0.2, 'Price'),
   getSliderValues('parametersWeight.horsePowerWeight', 0.4, 'Horse power'),
   getSliderValues('parametersWeight.typeOfFuelWeight', 0.3, 'Type of fuel'),
-  getSliderValues('parametersWeight.gearBoxWeight', 0.6, 'Gear box'),
-  getSliderValues('parametersWeight.wheelDriveWeight', 0.2, 'Wheel drive')
+  getSliderValues('parametersWeight.gearBoxWeight', 0.6, 'Gear box')
 ];
 
 const ParametersWeights = () => {
