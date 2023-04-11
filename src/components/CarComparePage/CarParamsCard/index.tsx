@@ -1,8 +1,12 @@
-import { Box, InputBase, InputLabel, MenuItem, Select, Typography } from '@mui/material';
+import { Box, InputLabel, MenuItem, Select, Typography } from '@mui/material';
 import CAR_IMG from '../../../assets/car_for_card.png';
 import './styles.scss';
 import { useFormContext } from 'react-hook-form';
 import { FUEL_TYPES, GEAR_BOX_TYPES } from '../../../feature/services/types/CarParameters';
+import YearInput from './YearInput';
+import MileageInput from './MileageInput';
+import PriceInput from './PriceInput';
+import HPInput from './HPInput';
 
 interface CarParamsCardProps {
   index: number;
@@ -20,14 +24,10 @@ const CarParamsCard = ({ index, carName }: CarParamsCardProps) => {
     <Box className="car-params-card">
       <Box className="form">
         <Typography variant="h2">{carName}</Typography>
-        <InputLabel className="label">Year of manufacture</InputLabel>
-        <InputBase {...register(`carsParameters[${index}].yearOfManufacture`)} />
-        <InputLabel className="label">Mileage</InputLabel>
-        <InputBase {...register(`carsParameters[${index}].mileage`)} />
-        <InputLabel className="label">Price</InputLabel>
-        <InputBase {...register(`carsParameters[${index}].price`)} />
-        <InputLabel className="label">Horsepower</InputLabel>
-        <InputBase {...register(`carsParameters[${index}].horsePower`)} />
+        <YearInput index={index} />
+        <MileageInput index={index} />
+        <PriceInput index={index} />
+        <HPInput index={index} />
         <InputLabel className="label">Type of fuel</InputLabel>
         <Select {...register(`carsParameters[${index}].typeOfFuel`)} defaultValue={FUEL_TYPES[0]}>
           {FUEL_TYPES.map((fuel) => (

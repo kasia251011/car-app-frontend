@@ -1,5 +1,25 @@
+/* eslint-disable no-unused-vars */
 import { createTheme } from '@mui/material';
 import { primary12, primary2, primary4, primary5, primary6 } from './constants';
+import { CSSProperties } from 'react';
+
+declare module '@mui/material/styles' {
+  interface TypographyVariants {
+    error: CSSProperties;
+  }
+
+  // allow configuration using createTheme
+  interface TypographyVariantsOptions {
+    error?: CSSProperties;
+  }
+}
+
+// Update the Typography's variant prop options
+declare module '@mui/material/Typography' {
+  interface TypographyPropsVariantOverrides {
+    error: true;
+  }
+}
 
 const theme = createTheme({
   typography: {
@@ -27,6 +47,11 @@ const theme = createTheme({
       fontWeight: 600,
       marginBottom: '8px',
       color: primary6
+    },
+    error: {
+      fontFamily: 'Poppins',
+      fontSize: '0.6rem',
+      color: 'red'
     }
   },
   palette: {
@@ -47,8 +72,7 @@ const theme = createTheme({
           height: '37px',
           padding: '0 7px',
           color: primary4,
-          fontSize: '12px',
-          marginBottom: '10px'
+          fontSize: '12px'
         }
       }
     },
