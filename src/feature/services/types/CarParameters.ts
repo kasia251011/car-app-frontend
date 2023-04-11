@@ -1,30 +1,10 @@
-export type Fuel =
-  | 'GASOLINE'
-  | 'AVGAS'
-  | 'AVTUR'
-  | 'KEROSENE'
-  | 'SOLAR_OIL'
-  | 'DIESEL_OIL'
-  | 'FUEL_OIL'
-  | 'BIODIESEL';
+export type Fuel = 'GAS' | 'PETROL' | 'DIESEL' | 'ELECTRIC' | 'HYDROGEN';
 
-export const FUEL_TYPES: ReadonlyArray<Fuel> = [
-  'AVGAS',
-  'AVTUR',
-  'BIODIESEL',
-  'FUEL_OIL',
-  'KEROSENE',
-  'SOLAR_OIL',
-  'DIESEL_OIL',
-  'GASOLINE'
-];
+export const FUEL_TYPES: ReadonlyArray<Fuel> = ['GAS', 'DIESEL', 'ELECTRIC', 'HYDROGEN', 'PETROL'];
+
 export type GearBox = 'MANUAL' | 'AUTOMATIC';
 
 export const GEAR_BOX_TYPES: ReadonlyArray<GearBox> = ['AUTOMATIC', 'MANUAL'];
-
-export type WheelDrive = 'FWD' | 'RWD' | 'AWD';
-
-export const WHEEL_DRIVE_TYPES: ReadonlyArray<WheelDrive> = ['AWD', 'FWD', 'RWD'];
 
 export interface CarsInfo {
   id?: number;
@@ -39,7 +19,6 @@ export interface ParametersWeight {
   horsePower: number;
   typeOfFuel: number;
   gearBox: number;
-  wheelDrive: number;
 }
 
 export interface CarParameters {
@@ -50,5 +29,4 @@ export interface CarParameters {
   horsePower: number;
   typeOfFuel: Fuel;
   gearBox: GearBox;
-  wheelDrive: WheelDrive;
 }

@@ -2,11 +2,7 @@ import { Box, InputBase, InputLabel, MenuItem, Select, Typography } from '@mui/m
 import CAR_IMG from '../../../assets/car_for_card.png';
 import './styles.scss';
 import { useFormContext } from 'react-hook-form';
-import {
-  FUEL_TYPES,
-  GEAR_BOX_TYPES,
-  WHEEL_DRIVE_TYPES
-} from '../../../feature/services/types/CarParameters';
+import { FUEL_TYPES, GEAR_BOX_TYPES } from '../../../feature/services/types/CarParameters';
 
 interface CarParamsCardProps {
   index: number;
@@ -45,16 +41,6 @@ const CarParamsCard = ({ index, carName }: CarParamsCardProps) => {
           {GEAR_BOX_TYPES.map((gearBox) => (
             <MenuItem key={gearBox} value={gearBox}>
               {formatOption(gearBox)}
-            </MenuItem>
-          ))}
-        </Select>
-        <InputLabel className="label">Wheel drive</InputLabel>
-        <Select
-          {...register(`carsParameters[${index}].wheelDrive`)}
-          defaultValue={WHEEL_DRIVE_TYPES[0]}>
-          {WHEEL_DRIVE_TYPES.map((wheelDrive) => (
-            <MenuItem key={wheelDrive} value={wheelDrive}>
-              {formatOption(wheelDrive)}
             </MenuItem>
           ))}
         </Select>
