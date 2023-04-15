@@ -113,7 +113,10 @@ const theme = createTheme({
           height: '12px'
         },
         mark: {
-          backgroundColor: 'red'
+          backgroundColor: 'transparent'
+        },
+        markLabel: {
+          fontSize: '0.6rem'
         }
       }
     }

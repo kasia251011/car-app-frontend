@@ -20,6 +20,14 @@
     flex-direction: column;
     justify-content: flex-end;
   }
+
+  &.active {
+    // border: #9c9bd9 5px solid;
+    box-shadow: 0px 0px 36px 1px rgba(119, 118, 203, 1);
+    animation-name: tilt-shaking;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+  }
 }
 
 @media screen and (min-width: 1600px) {
@@ -30,4 +38,12 @@
     }
 
   }
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }

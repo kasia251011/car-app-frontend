@@ -13,13 +13,13 @@ const CarComparePage = () => {
         <Box className="header">
           <Typography variant="h1">Which car is better for you?</Typography>
           <Typography variant="subtitle1">
-            Enter parameters for two cars, AI will compare them for you, and tell which is better
-            option
+            Enter the parameters of two cars, algorithm will compare them for you, and tell you
+            which is the better option.
           </Typography>
         </Box>
         <Box className="content">
-          <CarParamsCard index={1} carName="First Car" />
-          <CarParamsCard index={2} carName="Second Car" />
+          <CarParamsCard index={0} carName="First Car" />
+          <CarParamsCard index={1} carName="Second Car" />
           <Box className="left-container">
             <Box className="weights">
               <CompareButton />
