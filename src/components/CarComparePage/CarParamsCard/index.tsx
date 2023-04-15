@@ -7,6 +7,7 @@ import YearInput from './YearInput';
 import MileageInput from './MileageInput';
 import PriceInput from './PriceInput';
 import HPInput from './HPInput';
+import { useAppSelector } from '../../../feature/hooks';
 
 interface CarParamsCardProps {
   index: number;
@@ -19,9 +20,10 @@ function formatOption(option: string) {
 
 const CarParamsCard = ({ index, carName }: CarParamsCardProps) => {
   const { register } = useFormContext();
+  const bestCarId = useAppSelector((state) => state.currentSession.bestCarId);
 
   return (
-    <Box className="car-params-card">
+    <Box className={`car-params-card ${bestCarId === index && 'active'}`}>
       <Box className="form">
         <Typography variant="h2">{carName}</Typography>
         <YearInput index={index} />
