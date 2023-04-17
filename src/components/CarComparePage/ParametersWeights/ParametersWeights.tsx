@@ -21,7 +21,7 @@ const SLIDER_VALUES = [
     { value: 0, label: 'Economy' },
     { value: 1, label: 'Speed' }
   ]),
-  getSliderValues('parametersWeight.gearBoxWeight', 0.6, 'Gear box', [
+  getSliderValues('parametersWeight.gearBox', 0.6, 'Gear box', [
     { value: 0, label: 'Comfort' },
     { value: 1, label: 'Control' }
   ])
