@@ -14,10 +14,10 @@ function getSliderValues(name: string, defaultValue: number, label: string, mark
 
 const SLIDER_VALUES = [
   getSliderValues('parametersWeight.yearOfManufacture', 0.1, 'Year of manufacture'),
-  getSliderValues('parametersWeight.mileageWeight', 0.7, 'Mileage'),
-  getSliderValues('parametersWeight.priceWeight', 0.2, 'Price'),
-  getSliderValues('parametersWeight.horsePowerWeight', 0.4, 'Horse power'),
-  getSliderValues('parametersWeight.typeOfFuelWeight', 0.3, 'Type of fuel', [
+  getSliderValues('parametersWeight.mileage', 0.7, 'Mileage'),
+  getSliderValues('parametersWeight.price', 0.2, 'Price'),
+  getSliderValues('parametersWeight.horsePower', 0.4, 'Horse power'),
+  getSliderValues('parametersWeight.typeOfFuel', 0.3, 'Type of fuel', [
     { value: 0, label: 'Economy' },
     { value: 1, label: 'Speed' }
   ]),
