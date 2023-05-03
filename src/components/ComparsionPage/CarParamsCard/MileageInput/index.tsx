@@ -1,18 +1,15 @@
 import { ErrorMessage } from '@hookform/error-message';
-import { InputLabel, InputBase, Typography } from '@mui/material';
+import { InputLabel, InputBase, Typography, Box } from '@mui/material';
 import { useFormContext } from 'react-hook-form';
+import { InputProps } from '../GearBoxSelect';
 
-interface MileageInputProps {
-  index: number;
-}
-
-const MileageInput = ({ index }: MileageInputProps) => {
+const MileageInput = ({ index }: InputProps) => {
   const {
     register,
     formState: { errors }
   } = useFormContext();
   return (
-    <>
+    <Box className="cell">
       <InputLabel className="label">Mileage</InputLabel>
       <InputBase
         {...register(`carsParameters[${index}].mileage`, {
@@ -36,7 +33,7 @@ const MileageInput = ({ index }: MileageInputProps) => {
         name={`carsParameters[${index}].mileage`}
         render={({ message }) => <Typography variant="error">{message}</Typography>}
       />
-    </>
+    </Box>
   );
 };
 

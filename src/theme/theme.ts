@@ -40,11 +40,15 @@ const theme = createTheme({
       color: '#313660'
     },
     h2: {
-      fontSize: '1.25rem',
+      fontSize: '1.8rem',
       fontWeight: 700,
-      marginBottom: '20px'
+      color: '#313660'
     },
     h3: {
+      fontSize: '1.25rem',
+      fontWeight: 700
+    },
+    h4: {
       fontSize: '0.9rem',
       fontWeight: 700,
       marginBottom: '20px'

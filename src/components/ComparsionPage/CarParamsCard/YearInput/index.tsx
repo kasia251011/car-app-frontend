@@ -1,18 +1,15 @@
 import { ErrorMessage } from '@hookform/error-message';
-import { InputLabel, InputBase, Typography } from '@mui/material';
+import { InputLabel, InputBase, Typography, Box } from '@mui/material';
 import { useFormContext } from 'react-hook-form';
+import { InputProps } from '../GearBoxSelect';
 
-interface YearInputProps {
-  index: number;
-}
-
-const YearInput = ({ index }: YearInputProps) => {
+const YearInput = ({ index }: InputProps) => {
   const {
     register,
     formState: { errors }
   } = useFormContext();
   return (
-    <>
+    <Box className="cell">
       <InputLabel className="label">Year of manufacture</InputLabel>
       <InputBase
         {...register(`carsParameters[${index}].yearOfManufacture`, {
@@ -36,7 +33,7 @@ const YearInput = ({ index }: YearInputProps) => {
         name={`carsParameters[${index}].yearOfManufacture`}
         render={({ message }) => <Typography variant="error">{message}</Typography>}
       />
-    </>
+    </Box>
   );
 };
 

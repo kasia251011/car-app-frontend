@@ -1,18 +1,15 @@
 import { ErrorMessage } from '@hookform/error-message';
-import { InputLabel, InputBase, Typography } from '@mui/material';
+import { InputLabel, InputBase, Typography, Box } from '@mui/material';
 import { useFormContext } from 'react-hook-form';
+import { InputProps } from '../GearBoxSelect';
 
-interface PriceInputProps {
-  index: number;
-}
-
-const PriceInput = ({ index }: PriceInputProps) => {
+const PriceInput = ({ index }: InputProps) => {
   const {
     register,
     formState: { errors }
   } = useFormContext();
   return (
-    <>
+    <Box className="cell">
       <InputLabel className="label">Price</InputLabel>
       <InputBase
         {...register(`carsParameters[${index}].price`, {
@@ -32,7 +29,7 @@ const PriceInput = ({ index }: PriceInputProps) => {
         name={`carsParameters[${index}].price`}
         render={({ message }) => <Typography variant="error">{message}</Typography>}
       />
-    </>
+    </Box>
   );
 };
 
