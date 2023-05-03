@@ -11,12 +11,11 @@ const CompareButton = () => {
   const dispatch = useAppDispatch();
 
   const sendData = async (data: FieldValues) => {
-    const carsinfo: CarsInfo = {
-      carsParameters: data.carsParameters,
-      parametersWeight: data.parametersWeight
+    const carsInfo: CarsInfo = {
+      carsParameters: data.carsParameters
     };
 
-    const id = await getBestCar(carsinfo).unwrap();
+    const id = await getBestCar(carsInfo).unwrap();
     dispatch(setBestCarId(id));
   };
 
@@ -35,14 +34,17 @@ const CompareButton = () => {
         variant="contained"
         color="error"
         onClick={resetComparison}
-        sx={{ margin: '30px 0px' }}>
+        sx={{ margin: '30px 0px', width: 'min-content' }}>
         Reset
       </Button>
     );
   }
 
   return (
-    <Button variant="contained" onClick={handleSubmit(sendData)} sx={{ margin: '30px 0px' }}>
+    <Button
+      variant="contained"
+      onClick={handleSubmit(sendData)}
+      sx={{ margin: '30px 0px', width: 'min-content' }}>
       Compare
     </Button>
   );

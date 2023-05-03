@@ -8,7 +8,6 @@ export const GEAR_BOX_TYPES: ReadonlyArray<GearBox> = ['AUTOMATIC', 'MANUAL'];
 
 export interface CarsInfo {
   id?: number;
-  parametersWeight: ParametersWeight;
   carsParameters: CarParameters[];
 }
 
