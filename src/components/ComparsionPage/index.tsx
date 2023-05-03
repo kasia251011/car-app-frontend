@@ -5,7 +5,7 @@ import './style.scss';
 import CompareButton from './CompareButton';
 import ParametersWeights from './ParametersWeights/ParametersWeights';
 
-const CarComparePage = () => {
+const ComparisonPage = () => {
   const methods = useForm();
   return (
     <FormProvider {...methods}>
@@ -35,4 +35,4 @@ const CarComparePage = () => {
   );
 };
 
-export default CarComparePage;
+export default ComparisonPage;

@@ -21,6 +21,13 @@ declare module '@mui/material/Typography' {
   }
 }
 
+declare module '@mui/material/Button' {
+  // eslint-disable-next-line no-unused-vars
+  interface ButtonPropsVariantOverrides {
+    nav: true;
+  }
+}
+
 const theme = createTheme({
   typography: {
     fontFamily: 'Poppins',
@@ -86,13 +93,28 @@ const theme = createTheme({
       }
     },
     MuiButton: {
-      styleOverrides: {
-        root: {
-          padding: '15px 25px',
-          textTransform: 'capitalize',
-          borderRadius: '10px'
+      variants: [
+        {
+          props: { variant: 'contained' },
+          style: {
+            padding: '15px 25px',
+            textTransform: 'capitalize',
+            borderRadius: '10px'
+          }
+        },
+        {
+          props: { variant: 'nav' },
+          style: {
+            padding: '10px 25px',
+            textTransform: 'capitalize',
+            borderRadius: '10px',
+            height: 'min-content',
+            color: '#72758F',
+            fontWeight: '600',
+            fontSize: '1.1rem'
+          }
         }
-      }
+      ]
     },
     MuiMenuItem: {
       styleOverrides: {

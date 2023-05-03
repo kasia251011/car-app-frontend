@@ -1,0 +1,16 @@
+.navbar {
+  display: flex;
+  padding: 20px 40px;
+  align-items: flex-end;
+  gap: 10px;
+
+  .logo {
+    color: #313660;
+    font-size: 2.7rem;
+    font-weight: 700;
+  }
+
+  a.active button{
+    color: #313660;
+  }
+}
