@@ -35,9 +35,9 @@ const theme = createTheme({
       color: '#383838'
     },
     h1: {
-      fontSize: '1.7rem',
+      fontSize: '2.7rem',
       fontWeight: 700,
-      color: primary2
+      color: '#313660'
     },
     h2: {
       fontSize: '1.25rem',
@@ -50,10 +50,10 @@ const theme = createTheme({
       marginBottom: '20px'
     },
     subtitle1: {
-      fontSize: '0.8rem',
+      fontSize: '0.9rem',
       fontWeight: 600,
       marginBottom: '8px',
-      color: primary6
+      color: '#6B6D8B'
     },
     error: {
       fontFamily: 'Poppins',
@@ -64,8 +64,8 @@ const theme = createTheme({
   palette: {
     primary: {
       light: '#D4F3F7',
-      main: primary5,
-      dark: primary4,
+      main: '#5351BD',
+      dark: '#4644A7',
       contrastText: '#fff'
     }
   },
