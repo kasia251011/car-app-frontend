@@ -1,8 +1,14 @@
-import CarComparePage from './CarComparePage';
+import { Outlet } from 'react-router-dom';
+import NavBar from './NavBar';
 import './app.scss';
 
 const App = () => {
-  return <CarComparePage />;
+  return (
+    <>
+      <NavBar />
+      <Outlet />
+    </>
+  );
 };
 
 export default App;
