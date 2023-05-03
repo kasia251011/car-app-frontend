@@ -116,7 +116,9 @@ const theme = createTheme({
           backgroundColor: 'transparent'
         },
         markLabel: {
-          fontSize: '0.6rem'
+          fontSize: '0.6rem',
+          top: '20px',
+          position: 'sticky'
         }
       }
     }
