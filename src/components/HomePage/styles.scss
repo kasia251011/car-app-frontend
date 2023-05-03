@@ -1,0 +1,41 @@
+.home-page {
+  padding: 80px 115px 40px;
+  display: flex;
+  height: calc(100vh - 108px);
+  box-sizing: border-box;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .step {
+    display: flex;
+
+    .number {
+      background-color: #AAA9DE;
+      width: 25px;
+      height: 25px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: 600;
+      margin-right: 10px;
+      font-size: 0.8rem;
+    }
+
+  }
+
+  .question {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #35347c;
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 500px;
+    align-self: flex-end;
+  }
+}
