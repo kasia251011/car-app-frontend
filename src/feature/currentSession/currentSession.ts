@@ -1,20 +1,27 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface CurrentSessionState {
-  bestCarId?: number | null;
+  comparisonResultCarId: number | null;
+  quizSelectedCarId: number | null;
 }
 
-const initialState: CurrentSessionState = {};
+const initialState: CurrentSessionState = {
+  comparisonResultCarId: null,
+  quizSelectedCarId: null
+};
 
 const currentSessionSlice = createSlice({
   name: 'currentSession',
   initialState,
   reducers: {
-    setBestCarId(state, action: PayloadAction<number | null>) {
-      state.bestCarId = action.payload;
+    setComparisonResultCarId(state, action: PayloadAction<number | null>) {
+      state.comparisonResultCarId = action.payload;
+    },
+    setQuizSelectedCarId(state, action: PayloadAction<number | null>) {
+      state.quizSelectedCarId = action.payload;
     }
   }
 });
 
-export const { setBestCarId } = currentSessionSlice.actions;
+export const { setComparisonResultCarId, setQuizSelectedCarId } = currentSessionSlice.actions;
 export default currentSessionSlice.reducer;

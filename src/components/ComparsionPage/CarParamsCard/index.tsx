@@ -15,7 +15,7 @@ interface CarParamsCardProps {
 }
 
 const CarParamsCard = ({ index, carName }: CarParamsCardProps) => {
-  const bestCarId = useAppSelector((state) => state.currentSession.bestCarId);
+  const bestCarId = useAppSelector((state) => state.currentSession.comparisonResultCarId);
 
   return (
     <Box className={`car-params-card ${bestCarId === index && 'active'}`}>

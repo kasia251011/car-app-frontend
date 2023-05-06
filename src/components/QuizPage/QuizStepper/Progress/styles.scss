@@ -1,0 +1,40 @@
+.progress-container {
+  position: relative;
+  display: inline-flex;
+
+  .progress {
+    z-index: 1;
+  }
+
+  .path {
+    position: absolute;
+    display: flex;
+    right: 0;
+    bottom: 0;
+    top:0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .value-container {
+    position: absolute;
+    display: flex;
+    right: 0;
+    bottom: 0;
+    top:0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+
+    .value {
+      color: #8F91A8;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.css-zc2y38-MuiCircularProgress-root {
+  color: #bbbeec !important;
+}

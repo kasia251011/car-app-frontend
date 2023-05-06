@@ -1,0 +1,21 @@
+.car-card {
+  width: 350px;
+  z-index: 1;
+  .row {
+    display: flex;
+    margin-top: 20px;
+
+    .cell {
+      flex: 1;
+
+      .label {
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+
+      .value {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

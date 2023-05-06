@@ -1,12 +1,15 @@
 import { Outlet } from 'react-router-dom';
 import NavBar from './NavBar';
-import './app.scss';
+import './styles.scss';
+import { Box } from '@mui/material';
 
 const App = () => {
   return (
     <>
       <NavBar />
-      <Outlet />
+      <Box className="page">
+        <Outlet />
+      </Box>
     </>
   );
 };

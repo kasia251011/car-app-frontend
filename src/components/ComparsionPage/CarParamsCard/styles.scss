@@ -15,7 +15,8 @@
       margin-top: 20px;
 
       .cell {
-
+        display: flex;
+        flex-direction: column;
         width: 180px;
         .label {
         
