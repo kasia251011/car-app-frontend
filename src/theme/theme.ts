@@ -40,12 +40,12 @@ const theme = createTheme({
       color: '#313660'
     },
     h2: {
-      fontSize: '1.8rem',
+      fontSize: '1.3rem',
       fontWeight: 700,
       color: '#313660'
     },
     h3: {
-      fontSize: '1.25rem',
+      fontSize: '1.1rem',
       fontWeight: 700
     },
     h4: {
@@ -145,6 +145,20 @@ const theme = createTheme({
           fontSize: '0.6rem',
           top: '20px',
           position: 'sticky'
+        }
+      }
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: '20px'
+        }
+      }
+    },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          margin: '5px'
         }
       }
     }

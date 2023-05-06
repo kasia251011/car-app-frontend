@@ -29,3 +29,8 @@ export interface CarParameters {
   typeOfFuel: Fuel;
   gearBox: GearBox;
 }
+
+export interface Car extends CarParameters {
+  name: string;
+  img?: string;
+}

@@ -1,8 +1,11 @@
 import { Box, Button, Typography } from '@mui/material';
 import './styles.scss';
 import WOMAN_IN_CAR_IMG from '../../assets/woman_in_car.svg';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
   return (
     <Box className="home-page">
       <Box>
@@ -29,7 +32,10 @@ const HomePage = () => {
           How do you want to set your perfect car parameters?
         </Typography>
         <Box>
-          <Button variant="contained" sx={{ marginRight: '20px' }}>
+          <Button
+            variant="contained"
+            sx={{ marginRight: '20px' }}
+            onClick={() => navigate('/quiz')}>
             Take A Quiz
           </Button>
           <Button>Manual</Button>

@@ -10,10 +10,10 @@ const ComparisonPage = () => {
     <FormProvider {...methods}>
       <Box className="car-compare-page">
         <Box className="header">
-          <Typography variant="h2" mb="5px">
+          <Typography variant="h2" mb="5px" mt="20px">
             You cannot decide between two cars?
           </Typography>
-          <Typography variant="subtitle1" mb="30px">
+          <Typography variant="subtitle1" mb="40px">
             Enter the parameters of two cars, algorithm will compare them for you, and tell you
             which is the better option.
           </Typography>

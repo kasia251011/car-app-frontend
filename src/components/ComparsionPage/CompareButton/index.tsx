@@ -3,7 +3,7 @@ import { FieldValues, useFormContext } from 'react-hook-form';
 import { useGetBestCarMutation } from '../../../feature/services/carParametersApi';
 import { CarsInfo } from '../../../feature/services/types/CarParameters';
 import { useAppDispatch } from '../../../feature/hooks';
-import { setBestCarId } from '../../../feature/currentSession/currentSession';
+import { setComparisonResultCarId } from '../../../feature/currentSession/currentSession';
 
 const CompareButton = () => {
   const { handleSubmit } = useFormContext();
@@ -16,12 +16,12 @@ const CompareButton = () => {
     };
 
     const id = await getBestCar(carsInfo).unwrap();
-    dispatch(setBestCarId(id));
+    dispatch(setComparisonResultCarId(id));
   };
 
   const resetComparison = () => {
     reset();
-    dispatch(setBestCarId(null));
+    dispatch(setComparisonResultCarId(null));
   };
 
   if (isLoading) {

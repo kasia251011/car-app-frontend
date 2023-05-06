@@ -1,0 +1,25 @@
+.quiz-page {
+  width: 100%;
+  .content {
+    display: flex;
+    width: 100%;
+
+    .quiz {
+      position: relative;
+
+      .car-cards {
+        display: flex;
+        gap: 120px;
+      }
+    }
+
+    .stepper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    
+  }
+}
