@@ -1,0 +1,21 @@
+.parameters-page {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    width: 100%;
+    .content-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 550px;
+    }
+    .parameters-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 550px;
+        .parameters-weights-container {
+            width: 50%;
+          }
+    }
+}
