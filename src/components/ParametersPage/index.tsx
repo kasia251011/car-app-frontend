@@ -17,9 +17,9 @@ const ParametersPage = () => {
             Take A Quiz
           </Typography>
           <Typography variant="subtitle1" align="center" sx={{ marginBottom: '20px' }}>
-            Don’t know yet what are the most important in your future car? <br></br>Take a quiz,
-            choose between pair of cars, and AI will generate best parameter weights accoarding to
-            your choises
+            You don’t know yet what is the most important in your future car? <br></br>Take a quiz,
+            choose between pair of cars, and AI will generate the best weights parameter accoarding
+            to your choises
           </Typography>
           <img src={QUIZ_ICON} />
           <Button variant="contained" sx={{ marginTop: '40px' }} onClick={() => navigate('/quiz')}>
