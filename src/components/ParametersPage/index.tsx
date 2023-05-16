@@ -2,8 +2,8 @@ import { Box, Button, Typography } from '@mui/material';
 import { FormProvider, useForm } from 'react-hook-form';
 import './style.scss';
 import ParametersWeights from './ParametersWeights/ParametersWeights';
-import QUIZ_ICON from '../../assets/quiz-icon.svg';
 import { useNavigate } from 'react-router-dom';
+import QuizPreview from './QuizPreview/QuizPreview';
 
 const ParametersPage = () => {
   const methods = useForm();
@@ -12,21 +12,8 @@ const ParametersPage = () => {
   return (
     <FormProvider {...methods}>
       <Box className="parameters-page">
-        <Box className="content-container">
-          <Typography variant="h2" sx={{ marginBottom: '20px' }}>
-            Take A Quiz
-          </Typography>
-          <Typography variant="subtitle1" align="center" sx={{ marginBottom: '20px' }}>
-            You don’t know yet what is the most important in your future car? <br></br>Take a quiz,
-            choose between pair of cars, and AI will generate the best weights parameter accoarding
-            to your choises
-          </Typography>
-          <img src={QUIZ_ICON} />
-          <Button variant="contained" sx={{ marginTop: '40px' }} onClick={() => navigate('/quiz')}>
-            Start a quiz
-          </Button>
-        </Box>
-        <Box className="parameters-container">
+        <QuizPreview />
+        <Box className="manual-parameter-selection">
           <Typography variant="h2" sx={{ marginBottom: '20px' }}>
             Set car parameters weights manual
           </Typography>
