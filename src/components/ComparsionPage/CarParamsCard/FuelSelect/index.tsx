@@ -1,6 +1,6 @@
 import { InputLabel, Box, MenuItem, Select } from '@mui/material';
 import { useFormContext } from 'react-hook-form';
-import { FUEL_TYPES } from '../../../../feature/services/types/CarParameters';
+import { FUEL_TYPES } from '../../../../feature/services/types/Car';
 import { InputProps } from '../GearBoxSelect';
 
 function formatOption(option: string) {

@@ -38,7 +38,7 @@ const HomePage = () => {
             onClick={() => navigate('/quiz')}>
             Take A Quiz
           </Button>
-          <Button>Manual</Button>
+          <Button onClick={() => navigate('/parameters')}>Manual</Button>
         </Box>
       </Box>
       <img src={WOMAN_IN_CAR_IMG} />

@@ -1,11 +1,18 @@
 import { Box, Typography } from '@mui/material';
 import CarCard from './CarCard';
 import QuizStepper from './QuizStepper';
-import { mocked_cars } from './CarCard/mockCars';
 import './styles.scss';
 import QuizBackground from './QuizBackground';
+import { useLazyGetCarsForQuizQuery } from '../../feature/services/carApi';
+import { useEffect } from 'react';
 
 const QuizPage = () => {
+  const [getCars, { data }] = useLazyGetCarsForQuizQuery();
+
+  useEffect(() => {
+    getCars();
+  }, []);
+
   return (
     <Box className="quiz-page">
       <Typography variant="h2" mb="5px" mt="20px">
@@ -17,8 +24,12 @@ const QuizPage = () => {
       <Box className="content">
         <Box className="quiz">
           <Box className="car-cards">
-            <CarCard {...mocked_cars[0]} />
-            <CarCard {...mocked_cars[1]} />
+            {data && (
+              <>
+                <CarCard {...data[0]} />
+                <CarCard {...data[1]} />
+              </>
+            )}
           </Box>
           <QuizBackground />
         </Box>

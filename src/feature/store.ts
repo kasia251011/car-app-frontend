@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { compareCarsApi } from './services/carParametersApi';
+import { compareCarsApi } from './services/carApi';
 import currentSessionReducer from './currentSession/currentSession';
 
 export const store = configureStore({

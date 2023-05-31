@@ -3,6 +3,11 @@
     justify-content: space-around;
     padding: 40px;
     width: 100%;
+
+    h6 {
+        margin-bottom: 50px;
+    }
+
     .manual-parameter-selection{
         display: flex;
         flex-direction: column;

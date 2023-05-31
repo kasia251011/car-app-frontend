@@ -4,7 +4,14 @@ import { useMemo, useState } from 'react';
 import './styles.scss';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../feature/hooks';
-import { setComparisonResultCarId } from '../../../feature/currentSession/currentSession';
+import {
+  setIsQuizFinished,
+  setQuizSelectedCarId
+} from '../../../feature/currentSession/currentSession';
+import {
+  useLazyGetCarsForQuizQuery,
+  useSendChosenCarFromQuizMutation
+} from '../../../feature/services/carApi';
 
 const MAX_STEPS = 20;
 
@@ -12,7 +19,9 @@ const QuizStepper = () => {
   const [step, setStep] = useState(1);
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const selectedCarId = useAppSelector((state) => state.currentSession.comparisonResultCarId);
+  const selectedCarId = useAppSelector((state) => state.currentSession.quizSelectedCarId);
+  const [getCars] = useLazyGetCarsForQuizQuery();
+  const [sendCarId] = useSendChosenCarFromQuizMutation();
 
   const quizIsNotFinished = useMemo(() => {
     return step + 1 <= MAX_STEPS;
@@ -24,13 +33,15 @@ const QuizStepper = () => {
 
   const nextStep = () => {
     if (quizIsNotFinished) {
-      //TODO: put car id
+      sendCarId({ id: selectedCarId ?? 1 });
+      getCars();
       setStep((prevStep) => prevStep + 1);
+      dispatch(setQuizSelectedCarId(null));
     } else {
-      //TODO: after navigate get params, and display them
+      dispatch(setIsQuizFinished(true));
       navigateToParameters();
     }
-    dispatch(setComparisonResultCarId(null));
+    dispatch(setQuizSelectedCarId(null));
   };
 
   return (
@@ -40,7 +51,7 @@ const QuizStepper = () => {
         variant="contained"
         onClick={nextStep}
         className="next-btn"
-        disabled={selectedCarId === null}>
+        disabled={selectedCarId === null && quizIsNotFinished}>
         {quizIsNotFinished ? 'Next' : 'Finish quiz & get new params'}
       </Button>
       {quizIsNotFinished && <Button onClick={navigateToParameters}>Cancel</Button>}
