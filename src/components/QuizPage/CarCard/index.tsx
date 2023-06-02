@@ -1,25 +1,15 @@
 import { Card, CardMedia, CardContent, Typography, Box, CardActionArea } from '@mui/material';
-import { Car } from '../../../feature/services/types/CarParameters';
+import { Car } from '../../../feature/services/types/Car';
 import CAR_DEFAULT_IMG from '../../../assets/car-default.svg';
 import './styles.scss';
 import { useAppDispatch } from '../../../feature/hooks';
-import { setComparisonResultCarId } from '../../../feature/currentSession/currentSession';
+import { setQuizSelectedCarId } from '../../../feature/currentSession/currentSession';
 
-const CarCard = ({
-  id,
-  name,
-  yearOfManufacture,
-  mileage,
-  price,
-  typeOfFuel,
-  horsePower,
-  gearBox,
-  img
-}: Car) => {
+const CarCard = ({ id, name, parameters, img }: Car) => {
   const dispatch = useAppDispatch();
 
   const setSelectedCarId = () => {
-    dispatch(setComparisonResultCarId(id ?? 0));
+    dispatch(setQuizSelectedCarId(id ?? 0));
   };
 
   return (
@@ -34,31 +24,31 @@ const CarCard = ({
           <Box className="row">
             <Box className="cell">
               <Typography className="label">Year of manufacture</Typography>
-              <Typography className="value">{yearOfManufacture}</Typography>
+              <Typography className="value">{parameters.yearOfManufacture}</Typography>
             </Box>
             <Box className="cell">
               <Typography className="label">Mileage</Typography>
-              <Typography className="value">{mileage}</Typography>
+              <Typography className="value">{parameters.mileage}</Typography>
             </Box>
           </Box>
           <Box className="row">
             <Box className="cell">
               <Typography className="label">Price</Typography>
-              <Typography className="value">{price}</Typography>
+              <Typography className="value">{parameters.price}</Typography>
             </Box>
             <Box className="cell">
               <Typography className="label">Horse power</Typography>
-              <Typography className="value">{horsePower}</Typography>
+              <Typography className="value">{parameters.horsePower}</Typography>
             </Box>
           </Box>
           <Box className="row">
             <Box className="cell">
               <Typography className="label">Type of fuel</Typography>
-              <Typography className="value">{typeOfFuel}</Typography>
+              <Typography className="value">{parameters.typeOfFuel}</Typography>
             </Box>
             <Box className="cell">
               <Typography className="label">Gear box</Typography>
-              <Typography className="value">{gearBox}</Typography>
+              <Typography className="value">{parameters.gearBox}</Typography>
             </Box>
           </Box>
         </CardContent>

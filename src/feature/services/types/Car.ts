@@ -6,12 +6,17 @@ export type GearBox = 'MANUAL' | 'AUTOMATIC';
 
 export const GEAR_BOX_TYPES: ReadonlyArray<GearBox> = ['AUTOMATIC', 'MANUAL'];
 
-export interface CarsInfo {
-  id?: number;
-  carsParameters: CarParameters[];
+export interface Car {
+  id: number;
+  name?: string;
+  /**
+   * url of image
+   */
+  img: string;
+  parameters: CarParameters;
 }
 
-export interface ParametersWeight {
+export interface ParametersWeights {
   yearOfManufacture: number;
   mileage: number;
   price: number;
@@ -30,7 +35,6 @@ export interface CarParameters {
   gearBox: GearBox;
 }
 
-export interface Car extends CarParameters {
-  name: string;
-  img?: string;
+export interface CarId {
+  id: number;
 }

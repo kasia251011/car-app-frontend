@@ -145,6 +145,9 @@ const theme = createTheme({
           fontSize: '0.6rem',
           top: '20px',
           position: 'sticky'
+        },
+        root: {
+          padding: '4.5px 0'
         }
       }
     },

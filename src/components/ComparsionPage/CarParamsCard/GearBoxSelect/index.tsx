@@ -1,6 +1,6 @@
 import { InputLabel, Box, MenuItem, Select } from '@mui/material';
 import { useFormContext } from 'react-hook-form';
-import { GEAR_BOX_TYPES } from '../../../../feature/services/types/CarParameters';
+import { GEAR_BOX_TYPES } from '../../../../feature/services/types/Car';
 
 export interface InputProps {
   index: number;

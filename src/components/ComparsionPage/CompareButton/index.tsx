@@ -1,9 +1,9 @@
 import { Button, CircularProgress } from '@mui/material';
 import { FieldValues, useFormContext } from 'react-hook-form';
-import { useGetBestCarMutation } from '../../../feature/services/carParametersApi';
-import { CarsInfo } from '../../../feature/services/types/CarParameters';
+import { useGetBestCarMutation } from '../../../feature/services/carApi';
 import { useAppDispatch } from '../../../feature/hooks';
 import { setComparisonResultCarId } from '../../../feature/currentSession/currentSession';
+import { Car } from '../../../feature/services/types/Car';
 
 const CompareButton = () => {
   const { handleSubmit } = useFormContext();
@@ -11,11 +11,9 @@ const CompareButton = () => {
   const dispatch = useAppDispatch();
 
   const sendData = async (data: FieldValues) => {
-    const carsInfo: CarsInfo = {
-      carsParameters: data.carsParameters
-    };
+    const cars = data as Car[];
 
-    const id = await getBestCar(carsInfo).unwrap();
+    const { id } = await getBestCar(cars).unwrap();
     dispatch(setComparisonResultCarId(id));
   };
 
